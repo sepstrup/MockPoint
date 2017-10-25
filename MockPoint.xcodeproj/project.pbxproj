@@ -11,9 +11,11 @@
 		5D5848461FA0DB420064AC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5848451FA0DB420064AC1F /* ViewController.swift */; };
 		5D5848481FA0DB420064AC1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5848471FA0DB420064AC1F /* Assets.xcassets */; };
 		5D58484B1FA0DB420064AC1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5848491FA0DB420064AC1F /* Main.storyboard */; };
+		8DAC502BB574F367DB9639F8 /* Pods_MockPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0C8A415A52D1D9B2DA2C3C /* Pods_MockPoint.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		121D2194F171C6A75CAC6724 /* Pods-MockPoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockPoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MockPoint/Pods-MockPoint.debug.xcconfig"; sourceTree = "<group>"; };
 		5D5848401FA0DB420064AC1F /* MockPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MockPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5848431FA0DB420064AC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D5848451FA0DB420064AC1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,6 +23,8 @@
 		5D58484A1FA0DB420064AC1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D58484C1FA0DB420064AC1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D58484D1FA0DB420064AC1F /* MockPoint.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MockPoint.entitlements; sourceTree = "<group>"; };
+		6993DB6AD09EC1AACEEF762A /* Pods-MockPoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockPoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-MockPoint/Pods-MockPoint.release.xcconfig"; sourceTree = "<group>"; };
+		7E0C8A415A52D1D9B2DA2C3C /* Pods_MockPoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MockPoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +32,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DAC502BB574F367DB9639F8 /* Pods_MockPoint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		088D3F18B45903167E701DFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E0C8A415A52D1D9B2DA2C3C /* Pods_MockPoint.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CC214D0A3A6320C3D6E7618 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				121D2194F171C6A75CAC6724 /* Pods-MockPoint.debug.xcconfig */,
+				6993DB6AD09EC1AACEEF762A /* Pods-MockPoint.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5D5848371FA0DB420064AC1F = {
 			isa = PBXGroup;
 			children = (
 				5D5848421FA0DB420064AC1F /* MockPoint */,
 				5D5848411FA0DB420064AC1F /* Products */,
+				2CC214D0A3A6320C3D6E7618 /* Pods */,
+				088D3F18B45903167E701DFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,9 +94,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D5848501FA0DB420064AC1F /* Build configuration list for PBXNativeTarget "MockPoint" */;
 			buildPhases = (
+				AD3CAC46B4B8BA32A6305105 /* [CP] Check Pods Manifest.lock */,
 				5D58483C1FA0DB420064AC1F /* Sources */,
 				5D58483D1FA0DB420064AC1F /* Frameworks */,
 				5D58483E1FA0DB420064AC1F /* Resources */,
+				345FF5C9390BE37ADEABE532 /* [CP] Embed Pods Frameworks */,
+				F465CF4EBD2B32AFFACE5C04 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,6 +155,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		345FF5C9390BE37ADEABE532 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MockPoint/Pods-MockPoint-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Swifter/Swifter.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swifter.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MockPoint/Pods-MockPoint-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD3CAC46B4B8BA32A6305105 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MockPoint-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F465CF4EBD2B32AFFACE5C04 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MockPoint/Pods-MockPoint-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D58483C1FA0DB420064AC1F /* Sources */ = {
@@ -261,32 +342,38 @@
 		};
 		5D5848511FA0DB420064AC1F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 121D2194F171C6A75CAC6724 /* Pods-MockPoint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MockPoint/MockPoint.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VV9533Q8L7;
+				DEVELOPMENT_TEAM = EZ7Q2444C2;
 				INFOPLIST_FILE = MockPoint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.powerlabs.MockPoint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		5D5848521FA0DB420064AC1F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6993DB6AD09EC1AACEEF762A /* Pods-MockPoint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MockPoint/MockPoint.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VV9533Q8L7;
+				DEVELOPMENT_TEAM = EZ7Q2444C2;
 				INFOPLIST_FILE = MockPoint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.powerlabs.MockPoint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

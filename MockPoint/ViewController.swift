@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Swifter
 
 class ViewController: NSViewController {
 
@@ -14,6 +15,13 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let server = HttpServer()
+        server["/hello"] = { .ok(.html("You asked for \($0)"))  }
+        do {
+            try server.start()
+        } catch {
+            print("fail")
+        }
     }
 
     override var representedObject: Any? {
